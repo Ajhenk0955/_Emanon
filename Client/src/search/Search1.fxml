@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.text.*?>
@@ -8,7 +9,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="550.0" prefWidth="700.0" styleClass="background" stylesheets="@JMetroDarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="applicationV2.Search1Controller">
+<AnchorPane prefHeight="550.0" prefWidth="700.0" styleClass="background" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SearchController">
 	<children>
 		<Label layoutX="267.0" layoutY="65.0" styleClass="header" stylesheets="@JMetroDarkTheme.css" text="Search ">
 			<font>
@@ -29,7 +30,7 @@
 			<graphic>
 				<ImageView fitHeight="51.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
 					<image>
-						<Image url="@../applicationV2_IMAGES/black-white-arrow.PNG" />
+						<Image url="@../IMAGES/black-white-arrow.PNG" />
 					</image>
 				</ImageView>
 			</graphic>
@@ -83,4 +84,8 @@
 			</font>
 		</Label>
 	</children>
+   <stylesheets>
+      <URL value="@JMetroDarkTheme.css" />
+      <URL value="@../JMetroDarkTheme.css" />
+   </stylesheets>
 </AnchorPane>
