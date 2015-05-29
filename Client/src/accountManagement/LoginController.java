@@ -1,3 +1,5 @@
+package accountManagement;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
@@ -5,7 +7,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
-public class LoginController {
+public class LoginController implements Innitializable, ControlledScreen{
 
     @FXML
     private TextField login_Username;
@@ -24,6 +26,8 @@ public class LoginController {
 
     @FXML
     private Hyperlink login_Hyperlink;
+    
+    ScreensController myController; 
 
     @FXML
     void handleLoginHyperlink(ActionEvent event) {
@@ -39,5 +43,14 @@ public class LoginController {
     void handleLoginButton(ActionEvent event) {
 
     }
+    
+    public void setScreenParent(ScreensController screenParent){ 
+        myController = screenParent; 
+     }
+    
+    @Override
+    public void initialize(URL url, ResourceBundle rb) { 
+        // TODO 
+   	} 
 
 }

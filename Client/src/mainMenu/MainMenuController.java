@@ -1,10 +1,10 @@
-package applicationV2;
+package mainMenu;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
-public class MainMenuController {
+public class MainMenuController Innitializable, ControlledScreen{
 
     @FXML
     private Button searchButton;
@@ -23,9 +23,8 @@ public class MainMenuController {
 
     @FXML
     private Button logoutButton;
-
-    @FXML
-
+    
+    ScreensController myController;
 
     @FXML
     void handleSearchButton(ActionEvent event) {
@@ -51,5 +50,15 @@ public class MainMenuController {
     void handleMMLogoutButton(ActionEvent event) {
 
     }
+    
+    
+    public void setScreenParent(ScreensController screenParent){ 
+        myController = screenParent; 
+     }
+    
+    @Override
+    public void initialize(URL url, ResourceBundle rb) { 
+        // TODO 
+   	} 
 
 }
