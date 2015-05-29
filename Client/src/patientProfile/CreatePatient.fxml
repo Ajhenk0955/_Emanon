@@ -8,15 +8,15 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane prefHeight="602.0" prefWidth="588.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="applicationV2.CreatePatientController">
+<BorderPane prefHeight="602.0" prefWidth="588.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CreatePatientController">
 	<center>
-		<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="700.0" styleClass="background" stylesheets="@JMetroDarkTheme.css" BorderPane.alignment="CENTER">
+		<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="700.0" styleClass="background" BorderPane.alignment="CENTER">
 			<children>
 				<Button fx:id="saveButton" layoutX="542.0" layoutY="488.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleSaveButton" prefHeight="85.0" prefWidth="85.0">
                <graphic>
                   <ImageView fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../applicationV2_IMAGES/mono-save.png" />
+                        <Image url="@../IMAGES/mono-save.png" />
                      </image>
                   </ImageView>
                </graphic></Button>
@@ -86,7 +86,7 @@
                <graphic>
                   <ImageView fitHeight="51.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../applicationV2_IMAGES/black-white-arrow.PNG" />
+                        <Image url="@../IMAGES/black-white-arrow.PNG" />
                      </image>
                   </ImageView>
                </graphic></Button>
@@ -116,6 +116,10 @@
             <TextField fx:id="Gender" blendMode="SOFT_LIGHT" layoutX="148.0" layoutY="258.0" prefHeight="25.0" prefWidth="35.0" />
             <TextField fx:id="state" blendMode="SOFT_LIGHT" layoutX="366.0" layoutY="432.0" prefHeight="25.0" prefWidth="35.0" />
 			</children>
+         <stylesheets>
+            <URL value="@JMetroDarkTheme.css" />
+            <URL value="@../JMetroDarkTheme.css" />
+         </stylesheets>
 		</AnchorPane>
 	</center>
 </BorderPane>
