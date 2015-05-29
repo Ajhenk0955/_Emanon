@@ -1,66 +1,64 @@
-package applicationV2;
-
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
-public class MainMenuController {
+public class CreatePatientController {
 
     @FXML
-    private Button searchButton;
+    private TextField lastName;
 
     @FXML
-    private TextField searchTerm;
+    private TextField zipCode;
 
     @FXML
-    private Button quickSearch;
+    private TextField MInitial;
 
     @FXML
-    private Button edit_UserProfile;
+    private TextField address;
 
     @FXML
-    private Button createPatientButton;
+    private TextField city;
 
     @FXML
-    private Button logoutButton;
+    private TextField homePhone;
 
     @FXML
-    void fcf6f6(ActionEvent event) {
+    private TextField Gender;
+
+    @FXML
+    private TextField monthOfBirth;
+
+    @FXML
+    private TextField ssn;
+
+    @FXML
+    private TextField firstName;
+
+    @FXML
+    private TextField dayOfBirth;
+
+    @FXML
+    private Button backButton;
+
+    @FXML
+    private TextField state;
+
+    @FXML
+    private Button saveButton;
+
+    @FXML
+    private TextField cellPhone;
+
+    @FXML
+    private TextField yearOfBirth;
+
+    @FXML
+    void handleSaveButton(ActionEvent event) {
 
     }
 
     @FXML
-    void fcf6f6(ActionEvent event) {
-
-    }
-
-    @FXML
-    void handleSearchButton(ActionEvent event) {
-
-    }
-
-    @FXML
-    void handleSearchButton(ActionEvent event) {
-
-    }
-
-    @FXML
-    void fcf7f7(ActionEvent event) {
-
-    }
-
-    @FXML
-    void handleUserProfile(ActionEvent event) {
-
-    }
-
-    @FXML
-    void handleAddPatientButton(ActionEvent event) {
-
-    }
-
-    @FXML
-    void handleMMLogoutButton(ActionEvent event) {
+    void handleBackButton(ActionEvent event) {
 
     }
 
