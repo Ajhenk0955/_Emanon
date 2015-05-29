@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
+<?import java.net.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.text.*?>
@@ -8,7 +10,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="550.0" prefWidth="700.0" styleClass="background" stylesheets="@JMetroDarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="applicationV2.MainMenuController">
+<AnchorPane prefHeight="550.0" prefWidth="700.0" styleClass="background" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainMenuController">
    <children>
       <Label layoutX="34.0" layoutY="28.0" text="Main Menu" textFill="#fcf6f6">
          <font>
@@ -22,12 +24,12 @@
             <Font size="25.0" />
          </font>
       </Label>
-      <Button fx:id="quickSearch" layoutX="607.0" layoutY="63.0" mnemonicParsing="false" onAction="#handleSearchButton" text="Go!" />
+      <Button fx:id="quickSearch" layoutX="607.0" layoutY="63.0" mnemonicParsing="false" onAction="#handleQuickSearchButton" text="Go!" />
     <Button fx:id="searchButton" layoutX="286.0" layoutY="132.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleSearchButton" prefHeight="118.0" prefWidth="128.0" textFill="#fcf7f7">
          <graphic>
             <ImageView fitHeight="89.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../applicationV2_IMAGES/glass1.PNG" />
+                  <Image url="@../IMAGES/glass1.PNG" />
                </image>
             </ImageView>
          </graphic>
@@ -41,7 +43,7 @@
          <graphic>
             <ImageView fitHeight="89.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../applicationV2_IMAGES/wrenchPic.jpg" />
+                  <Image url="@../IMAGES/wrenchPic.jpg" />
                </image>
             </ImageView>
          </graphic>
@@ -55,7 +57,7 @@
          <graphic>
             <ImageView fitHeight="89.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../applicationV2_IMAGES/AddPatient.PNG" />
+                  <Image url="@../IMAGES/AddPatient.PNG" />
                </image>
             </ImageView>
          </graphic>
@@ -69,7 +71,7 @@
          <graphic>
             <ImageView fitHeight="89.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../applicationV2_IMAGES/logOutvector.PNG" />
+                  <Image url="@../IMAGES/logOutvector.PNG" />
                </image>
             </ImageView>
          </graphic>
@@ -80,4 +82,8 @@
          </font>
       </Label>
    </children>
+   <stylesheets>
+      <URL value="@JMetroDarkTheme.css" />
+      <URL value="@../JMetroDarkTheme.css" />
+   </stylesheets>
 </AnchorPane>
