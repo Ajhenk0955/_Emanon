@@ -1,10 +1,17 @@
 package patientProfile;
 
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import application.ControlledScreen;
+import application.ScreenController;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
-public class CreatePatientController implements Innitializable, ControlledScreen{
+public class CreatePatientController implements Initializable, ControlledScreen {
 
 	@FXML
 	private TextField lastName;
@@ -53,8 +60,8 @@ public class CreatePatientController implements Innitializable, ControlledScreen
 
 	@FXML
 	private TextField yearOfBirth;
-	
-	ScreensController myController;
+
+	ScreenController myController;
 
 	@FXML
 	void handleSaveButton(ActionEvent event) {
@@ -66,13 +73,14 @@ public class CreatePatientController implements Innitializable, ControlledScreen
 
 	}
 
-	public void setScreenParent(ScreensController screenParent) {
+	public void setScreenParent(ScreenController screenParent) {
 		myController = screenParent;
 	}
 
 	@Override
-	public void initialize(URL url, ResourceBundle rb) {
-		// TODO
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		// TODO Auto-generated method stub
+
 	}
 
 }

@@ -1,56 +1,63 @@
 package accountManagement;
 
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import application.ControlledScreen;
+import application.ScreenController;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
-public class LoginController implements Innitializable, ControlledScreen{
+public class LoginController implements Initializable, ControlledScreen {
 
-    @FXML
-    private TextField login_Username;
+	@FXML
+	private TextField login_Username;
 
-    @FXML
-    private Label login_Label;
+	@FXML
+	private Label login_Label;
 
-    @FXML
-    private Button signUpButton;
+	@FXML
+	private Button signUpButton;
 
-    @FXML
-    private Button login_Button;
+	@FXML
+	private Button login_Button;
 
-    @FXML
-    private PasswordField login_Password;
+	@FXML
+	private PasswordField login_Password;
 
-    @FXML
-    private Hyperlink login_Hyperlink;
-    
-    ScreensController myController; 
+	@FXML
+	private Hyperlink login_Hyperlink;
 
-    @FXML
-    void handleLoginHyperlink(ActionEvent event) {
+	ScreenController myController;
 
-    }
+	@FXML
+	void handleLoginHyperlink(ActionEvent event) {
 
-    @FXML
-    void handleSignUpButton(ActionEvent event) {
+	}
 
-    }
+	@FXML
+	void handleSignUpButton(ActionEvent event) {
 
-    @FXML
-    void handleLoginButton(ActionEvent event) {
+	}
 
-    }
-    
-    public void setScreenParent(ScreensController screenParent){ 
-        myController = screenParent; 
-     }
-    
-    @Override
-    public void initialize(URL url, ResourceBundle rb) { 
-        // TODO 
-   	} 
+	@FXML
+	void handleLoginButton(ActionEvent event) {
+
+	}
+
+	public void setScreenParent(ScreenController screenParent) {
+		myController = screenParent;
+	}
+
+	@Override
+	public void initialize(URL url, ResourceBundle rb) {
+		// TODO
+	}
 
 }

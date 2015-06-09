@@ -1,4 +1,4 @@
-package backdoor_;
+package security;
 
 import java.util.HashMap;
 import java.util.regex.Matcher;
@@ -24,18 +24,16 @@ public class Verification {
 		REGEX.put("ADDRESS", "\\d+\\s+([a-zA-Z]+|[a-zA-Z]+\\s[a-zA-Z]+)");
 		REGEX.put("EMAILADDRESS", "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
 				+ "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
-		REGEX.put("PASSWORD",
-				"((?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{5,20})");
+		REGEX.put("PASSWORD", "((?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{5,20})");
 	}
 
 	/**
-	 * Verifies any value
-	 * Also returns formatted phone numbers
+	 * Verifies any value Also returns formatted phone numbers
 	 * 
 	 * @return
 	 */
 	public boolean Verify(String type, String value) {
-		if(value == null){
+		if (value == null) {
 			return false;
 		}
 		Pattern pattern = Pattern.compile(REGEX.get(type));

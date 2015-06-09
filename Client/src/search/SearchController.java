@@ -1,11 +1,18 @@
 package search;
 
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import application.ControlledScreen;
+import application.ScreenController;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 
-public class SearchController implements Innitializable, ControlledScreen {
+public class SearchController implements Initializable, ControlledScreen {
 
 	@FXML
 	private CheckBox earBox;
@@ -34,7 +41,7 @@ public class SearchController implements Innitializable, ControlledScreen {
 	@FXML
 	private CheckBox insuranceBox;
 
-	ScreensController myController;
+	ScreenController myController;
 
 	@FXML
 	void search1_buttons(ActionEvent event) {
@@ -46,12 +53,15 @@ public class SearchController implements Innitializable, ControlledScreen {
 
 	}
 
-	public void setScreenParent(ScreensController screenParent) {
-		myController = screenParent;
+	@Override
+	public void setScreenParent(ScreenController screenPage) {
+		// TODO Auto-generated method stub
+
 	}
 
 	@Override
-	public void initialize(URL url, ResourceBundle rb) {
-		// TODO
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		// TODO Auto-generated method stub
+
 	}
 }
