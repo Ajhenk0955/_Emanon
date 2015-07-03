@@ -1,10 +1,11 @@
-package accountManagement;
+package screensframework;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import application.ControlledScreen;
 import application.ScreenController;
+import application.ScreenFramework;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -48,7 +49,9 @@ public class LoginController implements Initializable, ControlledScreen {
 
 	@FXML
 	void handleLoginButton(ActionEvent event) {
-
+		//run input validation
+		//change window
+		myController.setScreen(ScreenFramework.MAIN_MENU);
 	}
 
 	public void setScreenParent(ScreenController screenParent) {

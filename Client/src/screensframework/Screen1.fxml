@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="460.0" prefWidth="462.0" xmlns:fx="http://javafx.com/fxml" fx:controller="screensframework.Screen1Controller">
+<children>
+      <TextField fx:id="login_Username" alignment="CENTER" layoutX="109.0" layoutY="218.0" prefHeight="25.0" prefWidth="206.0" promptText="Username"  />
+      <PasswordField fx:id="login_Password" alignment="CENTER" layoutX="109.0" layoutY="251.0" prefHeight="25.0" prefWidth="206.0" promptText="Password" />
+      <Label fx:id="login_Label" layoutX="79.0" layoutY="50.0" prefHeight="17.0" prefWidth="141.0" textAlignment="CENTER" />
+      <Label contentDisplay="CENTER" layoutX="109.0" layoutY="30.0" prefHeight="77.0" prefWidth="223.0" styleClass="header" text="Emanon: ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="89.0" layoutY="103.0" styleClass="header"  text="File System" />
+      <Hyperlink fx:id="login_Hyperlink" layoutX="161.0" layoutY="284.0" onAction="#handleLoginHyperlink" text="Forgot Password?" />
+      <HBox layoutX="201.0" layoutY="358.0" prefHeight="33.0" prefWidth="213.0">
+         <children>
+            <Button fx:id="signUpButton" mnemonicParsing="false" onAction="#handleSignUpButton" prefHeight="33.0" prefWidth="99.0" text="Sign up" />
+            <Button fx:id="login_Button" mnemonicParsing="false" onAction="#handleLoginButton" prefHeight="33.0" prefWidth="99.0"  text="Login" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+
+</AnchorPane>
