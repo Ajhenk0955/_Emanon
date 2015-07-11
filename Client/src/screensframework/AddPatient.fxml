@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import java.net.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane blendMode="EXCLUSION" prefHeight="550" prefWidth="700" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="screensframework.AddPatientController">
+	<center>
+		<AnchorPane minHeight="-Infinity" minWidth="-Infinity" opacity="0.99" prefHeight="550.0" prefWidth="700.0" styleClass="background" BorderPane.alignment="CENTER">
+			<children>
+				<Button fx:id="saveButton" layoutX="544.0" layoutY="438.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleSaveButton" prefHeight="85.0" prefWidth="85.0">
+               <graphic>
+                  <ImageView fitHeight="65.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../IMAGES/mono-save.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+				<TextField fx:id="firstName" blendMode="SOFT_LIGHT" layoutX="148.0" layoutY="127.0" prefHeight="25.0" prefWidth="185.0" />
+				<TextField fx:id="lastName" blendMode="SOFT_LIGHT" layoutX="443.0" layoutY="127.0" prefHeight="25.0" prefWidth="176.0" />
+				<TextField fx:id="MInitial" blendMode="SOFT_LIGHT" layoutX="148.0" layoutY="190.0" prefHeight="25.0" prefWidth="35.0" />
+				<TextField fx:id="ssn" blendMode="SOFT_LIGHT" layoutX="467.0" layoutY="235.0" promptText="XXX-XX-XXXX" />
+				<TextField fx:id="homePhone" blendMode="SOFT_LIGHT" layoutX="148.0" layoutY="289.0" promptText="(000) 000-0000" />
+				<TextField fx:id="cellPhone" blendMode="SOFT_LIGHT" layoutX="467.0" layoutY="289.0" promptText="(000) 000-0000" />
+				<TextField fx:id="address" blendMode="SOFT_LIGHT" layoutX="148.0" layoutY="348.0" prefHeight="25.0" prefWidth="324.0" />
+				<TextField fx:id="city" blendMode="SOFT_LIGHT" layoutX="148.0" layoutY="413.0" prefHeight="25.0" prefWidth="146.0" />
+				<TextField fx:id="zipCode" blendMode="SOFT_LIGHT" layoutX="535.0" layoutY="409.0" prefHeight="25.0" prefWidth="77.0" />
+				<Label layoutX="59.0" layoutY="127.0" styleClass="main_column_section" text="First Name" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+				<Label layoutX="358.0" layoutY="127.0" styleClass="main_column_section" text="Last Name" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+				<Label layoutX="102.0" layoutY="194.0" text="M.I." textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+				<Label layoutX="101.0" layoutY="239.0" text="M/F" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+				<Label layoutX="293.0" layoutY="190.0" styleClass="main_column_section" text="Date of Birth" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+				<Label layoutX="343.0" layoutY="239.0" text="Social Security " textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+				<Label layoutX="46.0" layoutY="289.0" text="Home Phone" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+				<Label layoutX="382.0" layoutY="289.0" text="Cell Phone" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+				<Label layoutX="84.0" layoutY="348.0" prefHeight="25.0" prefWidth="63.0" text="Address" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+				<Label layoutX="102.0" layoutY="413.0" text="City" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+				<Label layoutX="320.0" layoutY="413.0" text="State" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+				<Label layoutX="497.0" layoutY="413.0" text="Zip" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+				<Text fill="WHITE" fontSmoothingType="LCD" layoutX="227.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Patient" textAlignment="CENTER" wrappingWidth="262.13671875">
+					<font>
+						<Font size="43.0" />
+					</font>
+				</Text>
+				<Button fx:id="backButton" contentDisplay="CENTER" depthTest="ENABLE" graphicTextGap="0.0" layoutX="38.0" layoutY="21.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleBackButton" prefHeight="65.0" prefWidth="65.0">
+               <graphic>
+                  <ImageView fitHeight="51.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../IMAGES/black-white-arrow.PNG" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Label layoutX="568.0" layoutY="524.0" text="SAVE" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="monthOfBirth" blendMode="SOFT_LIGHT" layoutX="399.0" layoutY="190.0" prefHeight="25.0" prefWidth="68.0" promptText="00" />
+            <TextField fx:id="dayOfBirth" blendMode="SOFT_LIGHT" layoutX="475.0" layoutY="190.0" prefHeight="25.0" prefWidth="68.0" promptText="00" />
+            <TextField fx:id="yearOfBirth" blendMode="SOFT_LIGHT" layoutX="551.0" layoutY="190.0" prefHeight="25.0" prefWidth="68.0" promptText="0000" />
+            <Label layoutX="426.0" layoutY="169.0" styleClass="main_column_section" text="M" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="501.0" layoutY="169.0" styleClass="main_column_section" text="D" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="577.0" layoutY="169.0" styleClass="main_column_section" text="Y" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="Gender" blendMode="SOFT_LIGHT" layoutX="148.0" layoutY="239.0" prefHeight="25.0" prefWidth="35.0" />
+            <TextField fx:id="state" blendMode="SOFT_LIGHT" layoutX="366.0" layoutY="413.0" prefHeight="25.0" prefWidth="35.0" />
+			</children>
+
+		</AnchorPane>
+	</center>
+</BorderPane>

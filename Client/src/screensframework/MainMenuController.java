@@ -40,54 +40,78 @@
 
 package screensframework;
 
-import javafx.application.Application;
-import javafx.scene.Group;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import application.ScreenController;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 
 /**
+ * FXML Controller class
  *
  * @author Angie
  */
-public class ScreensFramework extends Application {
+public class MainMenuController implements Initializable , ControlledScreen {
+
+    ScreensController myController;
     
-    public static String LoginID = "Login";
-    public static String LoginFile = "Login.fxml";
-    public static String MainMenuID = "MainMenu";
-    public static String MainMenuFile = "MainMenu.fxml";
-    public static String SearchScreenID = "SearchScreen";
-    public static String SearchScreenFile = "SearchScreen.fxml";
-    public static String AddPatientID = "AddPatient";
-    public static String AddPatientFile = "AddPatient.fxml";
-    
+    @FXML
+	private Button searchButton;
+
+	@FXML
+	private TextField searchTerm;
+
+	@FXML
+	private Button quickSearch;
+
+	@FXML
+	private Button edit_UserProfile;
+
+	@FXML
+	private Button createPatientButton;
+
+	@FXML
+	private Button logoutButton;
+    /**
+     * Initializes the controller class.
+     */
     
     @Override
-    public void start(Stage primaryStage) {
-        
-        ScreensController mainContainer = new ScreensController();
-        mainContainer.loadScreen(ScreensFramework.LoginID, ScreensFramework.LoginFile);
-        mainContainer.loadScreen(ScreensFramework.MainMenuID, ScreensFramework.MainMenuFile);
-        mainContainer.loadScreen(ScreensFramework.SearchScreenID, ScreensFramework.SearchScreenFile);
-        mainContainer.loadScreen(ScreensFramework.AddPatientID, ScreensFramework.AddPatientFile);
-        
-        mainContainer.setScreen(ScreensFramework.LoginID);
-        
-        Group root = new Group();
-        root.getChildren().addAll(mainContainer);
-        Scene scene = new Scene(root);
-        primaryStage.setScene(scene);
-        primaryStage.show();
+    public void initialize(URL url, ResourceBundle rb) {
+        // TODO
     }
+    
+    @FXML
+	void handleSearchButton(ActionEvent event) {
+    	myController.setScreen(ScreensFramework.SearchScreenID);
+	}
 
-    /**
-     * The main() method is ignored in correctly deployed JavaFX application.
-     * main() serves only as fallback in case the application can not be
-     * launched through deployment artifacts, e.g., in IDEs with limited FX
-     * support. NetBeans ignores main().
-     *
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        launch(args);
-    }
+	@FXML
+	void handleQuickSearchButton(ActionEvent event) {
+
+	}
+
+	@FXML
+	void handleUserProfile(ActionEvent event) {
+
+	}
+
+	@FXML
+	void handleAddPatientButton(ActionEvent event) {
+		 myController.setScreen(ScreensFramework.AddPatientID);
+	}
+
+	@FXML
+	void handleMMLogoutButton(ActionEvent event) {
+		 myController.setScreen(ScreensFramework.LoginID);
+	}
+
+	public void setScreenParent(ScreensController screenParent) {
+		myController = screenParent;
+	}
+
 }

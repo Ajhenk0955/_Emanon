@@ -37,78 +37,42 @@
  * only if the new code is made subject to such option by the copyright
  * holder.
  */ 
-
 package screensframework;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-
-import application.ScreenController;
-import application.ScreenFramework;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.Hyperlink;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
 
 /**
  * FXML Controller class
  *
  * @author Angie
  */
-public class Screen1Controller implements Initializable, ControlledScreen {
+public class Screen5Controller implements Initializable, ControlledScreen {
 
-	@FXML
-	private TextField login_Username;
+    ScreensController myController;
+    
+    /**
+     * Initializes the controller class.
+     */
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        // TODO
+    }    
+    
+    public void setScreenParent(ScreensController screenParent){
+        myController = screenParent;
+    }
 
-	@FXML
-	private Label login_Label;
-
-	@FXML
-	private Button signUpButton;
-
-	@FXML
-	private Button login_Button;
-
-	@FXML
-	private PasswordField login_Password;
-
-	@FXML
-	private Hyperlink login_Hyperlink;
-
-	ScreensController myController;
-
-	@FXML
-	void handleLoginHyperlink(ActionEvent event) {
-
-	}
-
-	@FXML
-	void handleSignUpButton(ActionEvent event) {
-
-	}
-
-	@FXML
-	void handleLoginButton(ActionEvent event) {
-		//run input validation
-		//change window
-		myController.setScreen(ScreenFramework.MAIN_MENU);
-	}
-
-	public void setScreenParent(ScreensController screenParent) {
-		myController = screenParent;
-	}
-
-	@Override
-	public void initialize(URL url, ResourceBundle rb) {
-		// TODO
-	}
-
-
-
-
+    @FXML
+    private void goToScreen1(ActionEvent event){
+       myController.setScreen(ScreensFramework.screen1ID);
+    }
+    
+    @FXML
+    private void goToScreen2(ActionEvent event){
+       myController.setScreen(ScreensFramework.screen2ID);
+    }
 }
-

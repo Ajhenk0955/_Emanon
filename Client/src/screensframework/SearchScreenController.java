@@ -37,42 +37,77 @@
  * only if the new code is made subject to such option by the copyright
  * holder.
  */ 
-
 package screensframework;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import application.ScreenController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.TextField;
 
 /**
  * FXML Controller class
  *
  * @author Angie
  */
-public class Screen2Controller implements Initializable , ControlledScreen {
+public class SearchScreenController implements Initializable, ControlledScreen {
 
     ScreensController myController;
+    
+	@FXML
+	private CheckBox earBox;
+
+	@FXML
+	private Button Search1_goButton;
+
+	@FXML
+	private CheckBox noseBox;
+
+	@FXML
+	private TextField searchTerm;
+
+	@FXML
+	private Button backButton;
+
+	@FXML
+	private CheckBox medicareBox;
+
+	@FXML
+	private CheckBox vaBox;
+
+	@FXML
+	private CheckBox eyeBox;
+
+	@FXML
+	private CheckBox insuranceBox;
+	
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }
+    }    
+	@FXML
+	void search1_buttons(ActionEvent event) {
+
+	}
+
+	@FXML
+	void handleBackButton(ActionEvent event) {
+		myController.setScreen(ScreensFramework.MainMenuID);
+	}
+
     
     public void setScreenParent(ScreensController screenParent){
         myController = screenParent;
     }
 
-    @FXML
-    private void goToScreen1(ActionEvent event){
-       myController.setScreen(ScreensFramework.screen1ID);
-    }
     
-    @FXML
-    private void goToScreen3(ActionEvent event){
-       myController.setScreen(ScreensFramework.screen3ID);
-    }
+
 }

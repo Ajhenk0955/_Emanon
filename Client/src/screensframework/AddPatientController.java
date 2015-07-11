@@ -41,19 +41,69 @@ package screensframework;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 
 /**
  * FXML Controller class
  *
  * @author Angie
  */
-public class Screen3Controller implements Initializable, ControlledScreen {
+public class AddPatientController implements Initializable, ControlledScreen {
 
     ScreensController myController;
     
+    @FXML
+	private TextField lastName;
+
+	@FXML
+	private TextField zipCode;
+
+	@FXML
+	private TextField MInitial;
+
+	@FXML
+	private TextField address;
+
+	@FXML
+	private TextField city;
+
+	@FXML
+	private TextField homePhone;
+
+	@FXML
+	private TextField Gender;
+
+	@FXML
+	private TextField monthOfBirth;
+
+	@FXML
+	private TextField ssn;
+
+	@FXML
+	private TextField firstName;
+
+	@FXML
+	private TextField dayOfBirth;
+
+	@FXML
+	private Button backButton;
+
+	@FXML
+	private TextField state;
+
+	@FXML
+	private Button saveButton;
+
+	@FXML
+	private TextField cellPhone;
+
+	@FXML
+	private TextField yearOfBirth;
     /**
      * Initializes the controller class.
      */
@@ -65,14 +115,15 @@ public class Screen3Controller implements Initializable, ControlledScreen {
     public void setScreenParent(ScreensController screenParent){
         myController = screenParent;
     }
-
-    @FXML
-    private void goToScreen1(ActionEvent event){
-       myController.setScreen(ScreensFramework.screen1ID);
-    }
     
     @FXML
-    private void goToScreen2(ActionEvent event){
-       myController.setScreen(ScreensFramework.screen2ID);
-    }
+	void handleSaveButton(ActionEvent event) {
+
+	}
+
+	@FXML
+	void handleBackButton(ActionEvent event) {
+		myController.setScreen(ScreensFramework.MainMenuID);
+	}
+
 }
