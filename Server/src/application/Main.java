@@ -82,6 +82,8 @@ public class Main {
 		return true;
 	}
 
+	//main runnable should be in a seperate class
+	//TODO
 	public static void main(String[] args) {
 		Main start = new Main();
 		while (true) {
