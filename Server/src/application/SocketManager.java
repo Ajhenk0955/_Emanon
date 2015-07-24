@@ -8,14 +8,14 @@ import java.io.InputStreamReader;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class Main {
+public class SocketManager {
 	ServerSocket MyService;
 	Socket serviceSocket = null;
 	BufferedReader input;
 	DataOutputStream output;
 	int portNumber = 3535;
 
-	Main() {
+	SocketManager() {
 		openSocket();
 		socketObject();
 		createInputStream();
@@ -82,22 +82,4 @@ public class Main {
 		return true;
 	}
 
-	//main runnable should be in a seperate class
-	//TODO
-	public static void main(String[] args) {
-		Main start = new Main();
-		while (true) {
-			try {
-				String line = start.input.readLine();
-				//reads input for login attempts
-				//then should create a session
-				//then with a session code should answer any requests
-				//after x amount of time session will request extension or terminate
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
-
-	}
 }
