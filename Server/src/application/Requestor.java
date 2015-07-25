@@ -20,6 +20,8 @@ import java.util.HashMap;
 // 00011 = failed login
 // 00100 = null line
 // 00001 = session manager full
+
+
 public class Requestor {
 	String line;
 	String[] sessions = new String[10];

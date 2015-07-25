@@ -1,4 +1,4 @@
-package clientRequests;
+package database;
 
 import java.util.Arrays;
 import java.util.List;
