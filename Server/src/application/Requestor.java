@@ -25,6 +25,7 @@ import java.util.HashMap;
 public class Requestor {
 	String line;
 	String[] sessions = new String[10];
+	DBManager database = new DBManager();
 
 	public boolean changeLine(String line) {
 		if (line == null)
@@ -71,6 +72,8 @@ public class Requestor {
 	private String search() {
 		if (!confirmSession())
 			return "10000";
+		
+		database.search();
 		return null;
 		// TODO Auto-generated method stub
 
@@ -79,6 +82,8 @@ public class Requestor {
 	private String removePatient() {
 		if (!confirmSession())
 			return "10000";
+		
+		database.removePatient();
 		return null;
 		// TODO Auto-generated method stub
 
@@ -87,6 +92,8 @@ public class Requestor {
 	private String addPatient() {
 		if (!confirmSession())
 			return "10000";
+		
+		database.addPatient();
 		return null;
 		// TODO Auto-generated method stub
 
@@ -95,6 +102,8 @@ public class Requestor {
 	private String removeFile() {
 		if (!confirmSession())
 			return "10000";
+		
+		database.removeFile();
 		return null;
 		// TODO Auto-generated method stub
 
@@ -103,6 +112,8 @@ public class Requestor {
 	private String addFile() {
 		if (!confirmSession())
 			return "10000";
+		
+		database.addFile();
 		return null;
 		// TODO Auto-generated method stub
 

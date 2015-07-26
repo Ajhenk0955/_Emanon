@@ -46,4 +46,24 @@ public class DBManager {
 		return result;
 
 	}
+
+	public void addFile() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void search() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void removePatient() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void removeFile() {
+		// TODO Auto-generated method stub
+		
+	}
 }
